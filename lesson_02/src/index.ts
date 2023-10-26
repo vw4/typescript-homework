@@ -7,15 +7,15 @@ class School {
 }
 
 class Direction {
-    levels: any[] = [];
+    levels: Level[] = [];
     private _name: string;
-
-    get name(): string {
-        return this._name;
-    }
 
     constructor(name: string) {
         this._name = name;
+    }
+
+    get name(): string {
+        return this._name;
     }
 
     addLevel(level: Level): void {
@@ -51,13 +51,13 @@ class Group {
     directionName: string;
     levelName: string;
 
-    get students(): Student[] {
-        return this._students;
-    }
-
     constructor(directionName: string, levelName: string) {
         this.directionName = directionName;
         this.levelName = levelName;
+    }
+
+    get students(): Student[] {
+        return this._students;
     }
 
     addStudent(student: Student): void {
@@ -65,8 +65,7 @@ class Group {
     }
 
     showPerformance(): Student[] {
-        const compareStudents = (a: Student, b: Student) => b.getPerformanceRating() - a.getPerformanceRating();
-        return this.students.sort(compareStudents);
+        return this.students.sort((a: Student, b: Student) => b.getPerformanceRating() - a.getPerformanceRating());
     }
 }
 
