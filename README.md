@@ -6,7 +6,7 @@
 ```cmd
 npm init -y
 npm i typescript ts-node -D
-tsc --init
+npx tsc --init
 md src
 md dist
 ```
@@ -17,7 +17,8 @@ md dist
   ...
   "lib": ["es2017", "ES2023.Array"],
   "rootDir": "src",
-  "outDir": "dist"
+  "outDir": "dist",
+  "strictNullChecks": true,
 }
 ```
 
