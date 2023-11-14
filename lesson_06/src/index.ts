@@ -10,7 +10,7 @@ abstract class AbstractFigure {
     abstract calculateArea(): number;
 }
 
-interface IRectangleFigure {
+interface IPrintable {
     print(): void;
 }
 
@@ -68,7 +68,7 @@ class Triangle extends AbstractFigure {
     }
 }
 
-class Rectangle extends AbstractFigure implements IRectangleFigure {
+class Rectangle extends AbstractFigure implements IPrintable {
     private _sides: [number, number] = [0, 0];
 
     get sides(): [number, number] {
@@ -88,7 +88,7 @@ class Rectangle extends AbstractFigure implements IRectangleFigure {
     }
 }
 
-class Square extends AbstractFigure implements IRectangleFigure {
+class Square extends AbstractFigure implements IPrintable {
     private _side: number = 0;
 
     get side(): number {
@@ -123,7 +123,7 @@ for (const figure of figures) {
     console.log(`[${figure.name}] color = "${figure.color}", calculateArea = ${figure.calculateArea()}"`);
 }
 
-const rectangleFigures: IRectangleFigure[] = [rectangle, square];
+const rectangleFigures: IPrintable[] = [rectangle, square];
 for (const rectangleFigure of rectangleFigures) {
     rectangleFigure.print();
 }
