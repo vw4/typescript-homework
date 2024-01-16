@@ -1,0 +1,16 @@
+{
+  "name": "typescript-homework",
+  "version": "1.0.0",
+  "description": "```cmd\r npm init -y\r npm i typescript ts-node -D\r npx tsc --init\r md src\r md dist\r echo \"node_modules\">.gitignore\r echo \"*\">dist/.gitignore\r echo \"*.*\">>dist/.gitignore\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
