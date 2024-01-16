@@ -1,7 +1,7 @@
 {
-  "name": "typescript-homework",
+  "name": "lesson_13",
   "version": "1.0.0",
-  "description": "```cmd\r npm init -y\r npm i typescript ts-node -D\r npx tsc --init\r md src\r md dist\r echo \"node_modules\">.gitignore\r echo \"*\">dist/.gitignore\r echo \"*.*\">>dist/.gitignore\r ```",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
